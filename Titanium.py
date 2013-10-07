@@ -174,7 +174,7 @@ class TitaniumCommand(sublime_plugin.WindowCommand):
             simulatorDisplay = self.simulatorDisplay
             simulatorHeight = ''
         else:
-            simulatorType = self.simtype[select]
+            simulatorType = 'iphone'
             simulatorDisplay = self.simulatorDisplay
             simulatorHeight = self.simulatorHeight
         self.run_titanium(["--sim-type", simulatorType, simulatorDisplay, simulatorHeight])
