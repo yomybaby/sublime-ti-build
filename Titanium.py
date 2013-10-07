@@ -144,7 +144,8 @@ class TitaniumCommand(sublime_plugin.WindowCommand):
     def select_android_avd(self, select):
         if select < 0:
             return
-        self.run_titanium(["--avd-id", self.avds[select]])
+        avdInfos = self.avds[select].split('_')
+        self.run_titanium( ["--avd-id", avdInfos[1], "--avd-skin", avdInfos[2], "--avd-abi", avdInfos[3]] )
 
     #--------------------------------------------------------------
     # IOS
